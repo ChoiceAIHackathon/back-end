@@ -11,7 +11,6 @@ import com.ai.choice.form.UpdateForm;
 import com.ai.choice.repository.RoleRepository;
 import com.ai.choice.repository.UserRepository;
 import com.ai.choice.rowmapper.UserRowMapper;
-import com.ai.choice.service.EmailService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -56,7 +55,7 @@ public class UserRepositoryImpl implements UserRepository<Users>, UserDetailsSer
     private final NamedParameterJdbcTemplate jdbc;
     private final RoleRepository<Role> roleRepository;
     private final BCryptPasswordEncoder encoder;
-    private final EmailService emailService;
+//    private final EmailService emailService;
 
     @Override
     public Users create(Users user) {
