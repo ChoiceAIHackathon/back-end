@@ -61,6 +61,11 @@ public class UserController {
     private final ApplicationEventPublisher publisher;
     private final EventService eventService;
 
+    @GetMapping("/hello")
+    public ResponseEntity<String> hello() {
+        return ResponseEntity.ok("Hello");
+    }
+
     @PostMapping("/login")
     public ResponseEntity<HttpResponse> login(@RequestBody @Valid LoginForm loginForm) {
         UserDTO user = authenticate(loginForm.getEmail(), loginForm.getPassword());
