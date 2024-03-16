@@ -1,11 +1,11 @@
 services:
-  invoiceapp:
-    container_name: invoiceappcontainer
+  choiceai:
+    container_name: choiceaicontainer
     build:
       context: .
       args:
         CONTAINER_PORT: ${CONTAINER_PORT}
-    image: invoiceapp:v1
+    image: choiceai:v1
     restart: unless-stopped
     env_file:
       - ${ENV_FILE}
